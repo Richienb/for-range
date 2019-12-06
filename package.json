@@ -1,6 +1,6 @@
 {
     "name": "for-range",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "Simplified syntax for a for loop.",
     "repository": "https://github.com/Richienb/for-range.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
