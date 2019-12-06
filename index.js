@@ -1,7 +1,12 @@
 "use strict"
 
-module.exports = (input, { postfix = "rainbows" } = {}) => {
-    if (typeof input !== "string") throw new TypeError(`Expected a string, got ${typeof input}`)
-
-    return `${input} & ${postfix}`
+module.exports = ({
+    min = 0,
+    max,
+    step = 1,
+}, callback) => {
+    for (let i = min; i <= max; i += step) {
+        const returnValue = callback(i)
+        if (returnValue === false) break
+    }
 }

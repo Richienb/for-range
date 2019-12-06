@@ -1,41 +1,64 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# For Range [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/for-range/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/for-range)
 
-My awesome module.
+Simplified syntax for a for loop.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/for-range.png)](https://npmjs.com/package/for-range)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install for-range
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const forRange = require("for-range");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+forRange({ min: 2, max: 10, step: 2 }, (i) => {
+    if (i === 4) return; // Skip for 4
+    if (i === 8) return false; // Stop for loop at 8
+    console.log(i);
+});
+
+// Native JS equaivent
+for (let i = 2; i <= 10; i += 2) {
+    if (i === 4) continue;
+    if (i === 8) break;
+    console.log(i);
+}
 ```
 
 ## API
 
-### theModule(input, options?)
-
-#### input
-
-Type: `string`
-
-Lorem ipsum.
+### forRange(options, callback)
 
 #### options
 
 Type: `object`
 
-##### postfix
+##### min
 
-Type: `string`\
-Default: `rainbows`
+Type: `number`\
+Default: `0`
 
-Lorem ipsum.
+The number to start the for loop at.
+
+##### max
+
+Type: `number`
+
+The number to end the for loop at.
+
+##### step
+
+Type: `number`\
+Default: `1`
+
+The amount to add to the number each iteration
+
+#### callback
+
+Type: `function`
+
+The callback to trigger for each iteration.

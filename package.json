@@ -1,8 +1,8 @@
 {
-    "name": "the-module",
+    "name": "for-range",
     "version": "0.0.0",
-    "description": "My awesome module.",
-    "repository": "https://github.com/Richienb/the-module.git",
+    "description": "Simplified syntax for a for loop.",
+    "repository": "https://github.com/Richienb/for-range.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
     "license": "MIT",
     "main": "index.js",
@@ -11,13 +11,20 @@
         "index.d.ts"
     ],
     "engines": {
-        "node": ">=8"
+        "node": ">=6"
     },
     "scripts": {
         "lint": "xo",
         "test": "yarn lint && ava"
     },
-    "keywords": [],
+    "keywords": [
+        "for",
+        "loop",
+        "interation",
+        "callback",
+        "simplified",
+        "wrapper"
+    ],
     "dependencies": {},
     "devDependencies": {
         "ava": "^2.1.0",
